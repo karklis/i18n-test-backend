@@ -26,12 +26,12 @@ function Page() {
   }, [lngs]);
 
   return (
-    <div className="App">
-      <div className="App-header">
+    <div className="App App-header" style={{ minWidth: '100%'}}>
+      <div>
         <img src={logo} className="App-logo" alt="logo" />
         <h2>{t('title')}</h2>
       </div>
-      <div className="App-intro">
+      <div >
         <div>
           {Object.keys(lngs).map((lng) => (
             <button key={lng} style={{ fontWeight: i18n.language === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
@@ -41,7 +41,7 @@ function Page() {
         </div>
         <MyComponent />
       </div>
-      <div>{t('description.part2')}</div>
+        <div>{t('description.part2')}</div>
       {/* <div>{t('new.key', 'this will be added automatically')}</div> */}
     </div>
   );
